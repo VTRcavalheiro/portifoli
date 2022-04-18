@@ -1,0 +1,59 @@
+body {
+   background-color: #ccc; /*cor do fundo */
+	 font-family: Arial, Helvetica, sans-serif;
+   margin: 0px;/* margin: 0px para zerar esta margem padrão que o body possui. */
+}
+/*inicio da configuração do nome */
+
+.container {
+    width: 1200px; /* Refere-se à largura do site dentro do container.   */
+    margin: auto;  /* A margin auto tem a função de fazer com que o navegador selecione
+            uma margem adequada para utilizar. Por exemplo, o valor auto 
+            pode centralizar um elemento no site. */
+    background-color: #FAFAFA; /*Cor do sub fundo da pagina */
+    
+}
+
+.nome {
+  display: flex; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+}
+
+h1 {
+  font-size: 250%;/* tamanho da fonte*/
+  margin-top: 5%; /*Regulagem do top*/
+  margin-left: 8%;/*Regulagem da esquerda*/
+}
+
+h1 a {
+  text-decoration: none;
+  color: #000000; /*Cor da Fonte*/
+}
+/*final da configuração do nome */
+
+/*inicio da configuração da idade */
+h2 {
+  font-size: 200%;/* tamanho da fonte*/
+  margin-top: 25%; /*Regulagem do top*/
+  margin-left: 1%;/*Regulagem da esquerda*/
+}
+
+h2 a {
+  text-decoration: none;
+  color: #000000; /*Cor da Fonte*/
+}
+/*final da configuração da idade */
+
+/*inicio da configuração da fhoto */
+.foto{
+  display: flex; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+  margin-right: 1%;
+  padding-left: 1%;;
+  /*margin-left: 1%;/*Regulagem da esquerda*/
+  margin-top: 1%;/*Regulagem do top*/
+}
+img { 
+	max-width: 15%;/*ajuste de largura da foto*/
+	height: 15%;/*ajuste de altura da foto*/
+  margin-top: 1%/*ajuste o distanciamento da foto do top*/
+}
+/*final da configuração da fhoto */
