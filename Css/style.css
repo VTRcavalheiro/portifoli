@@ -1,0 +1,149 @@
+body {
+   background-color: #ccc; /*cor do fundo */
+	 font-family: Arial, Helvetica, sans-serif;
+   margin: 0px;/* margin: 0px para zerar esta margem padrão que o body possui. */
+}
+/*inicio da configuração do nome */
+
+.container {
+    width: 1200px; /* Refere-se à largura do site dentro do container.   */
+    margin: auto;  /* A margin auto tem a função de fazer com que o navegador selecione
+            uma margem adequada para utilizar. Por exemplo, o valor auto 
+            pode centralizar um elemento no site. */
+    background-color: #FAFAFA; /*Cor do sub fundo da pagina */
+    
+}
+/*inicio da barra que separa*/
+.separador { /*barra que separa os produtos da parte inferior */
+    height: 1px;
+    background-color: #000000;
+}
+/*final da barra que separa*/
+/*inicio do menu */
+.menu {
+    padding: 0px 10px;  /* Primeiro Define o tamanho, Segundo move de um lado para o outro */
+    background-color: #1c76e0; /*Cor do top do titulo */
+}
+.btn {
+    display: inline-block;
+    height: 30px;
+    margin-right: 80%;
+    text-align: center;
+    padding-top: 1%;
+    border: 2px;
+    border-radius: 10px;
+    border-color: #1B6BCA;
+}
+.btn {
+    font-size: 100%;
+}
+
+.btn a {
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: #1C76E0;
+    background-color: #fff;
+    border-color: #3b3c3c;
+    border-radius: 10px;
+    padding: 8px;
+}
+.btn2 {
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    padding-top: 1%;
+    border: 2px;
+    border-radius: 10px;
+    border-color: #1B6BCA;
+}
+.btn2 {
+    font-size: 100%;
+}
+
+.btn2 a {
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: #1C76E0;
+    background-color: #fff;
+    border-color: #3b3c3c;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.btn3 {
+    display: inline-block;
+    text-align: center;
+    padding-top: 1%;
+    border: 2px;
+    border-radius: 10px;
+    border-color: #1B6BCA;
+}
+.btn3 {
+    font-size: 100%;
+}
+
+.btn3 a {
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: #1C76E0;
+    background-color: #fff;
+    border-color: #3b3c3c;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+
+/*final do menu*/
+.nome {
+  display: inline-block; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+}
+
+h1 {
+  font-size: 250%;/* tamanho da fonte*/
+  margin-top: 5%; /*Regulagem do top*/
+  margin-left: 8%;/*Regulagem da esquerda*/
+}
+
+h1 a {
+  text-decoration: none;
+  color: #000000; /*Cor da Fonte*/
+}
+/*final da configuração do nome */
+
+/*inicio da configuração da idade */
+.idade {
+  display: inline-block; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+  padding-left: 1%
+}
+
+h2 {
+  font-size: 200%;/* tamanho da fonte*/
+  margin-top: 25%; /*Regulagem do top*/
+  margin-left: 1%;/*Regulagem da esquerda*/
+}
+
+h2 a {
+  text-decoration: none;
+  color: #000000; /*Cor da Fonte*/
+}
+/*final da configuração da idade */
+
+/*inicio da configuração da fhoto */
+.foto{
+  display: flex; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+  margin-right: 1%;
+  padding-left: 1%;;
+  /*margin-left: 1%;/*Regulagem da esquerda*/
+  margin-top: 1%;/*Regulagem do top*/
+}
+img { 
+	max-width: 15%; /*ajuste de largura da foto*/
+	height: 15%; /*ajuste de altura da foto*/
+  margin-top: 1%; /*ajuste o distanciamento da foto do top*/
+  border: solid 7px #ccc;
+  margin-bottom: 10px;
+}
+/*final da configuração da fhoto */
