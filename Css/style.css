@@ -1,18 +1,24 @@
-body {
-   background-color: #ccc; /*cor do fundo */
-	 font-family: Arial, Helvetica, sans-serif;
-   margin: 0px;/* margin: 0px para zerar esta margem padrão que o body possui. */
+/* Faz com que a página use 100% da altura da tela */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ccc; /* cor do fundo */
+  font-family: Arial, Helvetica, sans-serif;
 }
-/*inicio da configuração do nome */
 
+/* Faz com que o container principal sempre ocupe pelo menos toda a tela */
 .container {
-    width: 1200px; /* Refere-se à largura do site dentro do container.   */
-    margin: auto;  /* A margin auto tem a função de fazer com que o navegador selecione
-            uma margem adequada para utilizar. Por exemplo, o valor auto 
-            pode centralizar um elemento no site. */
-    background-color: #FAFAFA; /*Cor do sub fundo da pagina */
-    
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh; /* 100% da altura da viewport */
+  margin: auto;
+  padding: 0 10px;
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
 }
+
 /*inicio da barra que separa*/
 .separador { /*barra que separa os produtos da parte inferior */
     height: 1px;
@@ -21,84 +27,45 @@ body {
 /*final da barra que separa*/
 /*inicio do menu */
 .menu {
-    padding: 0px 10px;  /* Primeiro Define o tamanho, Segundo move de um lado para o outro */
-    background-color: #1c76e0; /*Cor do top do titulo */
-}
-.btn {
-    display: inline-block;
-    height: 30px;
-    margin-right: 80%;
-    text-align: center;
-    padding-top: 1%;
-    border: 2px;
-    border-radius: 10px;
-    border-color: #1B6BCA;
-}
-.btn {
-    font-size: 100%;
+  padding: 10px;
+  background-color: #1c76e0;
 }
 
-.btn a {
-    font-weight: bold;
-    text-decoration: none;
-    list-style: none;
-    color: #1C76E0;
-    background-color: #fff;
-    border-color: #3b3c3c;
-    border-radius: 10px;
-    padding: 8px;
-}
-.btn2 {
-    display: inline-block;
-    margin-right: 5px;
-    text-align: center;
-    padding-top: 1%;
-    border: 2px;
-    border-radius: 10px;
-    border-color: #1B6BCA;
-}
-.btn2 {
-    font-size: 100%;
+/* container dos botões */
+.botoes {
+  display: flex;
+  justify-content: flex-start; /* ou space-between, se quiser que se espalhem */
+  gap: 10px;
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
 }
 
-.btn2 a {
-    font-weight: bold;
-    text-decoration: none;
-    list-style: none;
-    color: #1C76E0;
-    background-color: #fff;
-    border-color: #3b3c3c;
-    border-radius: 10px;
-    padding: 8px;
+/* Botões genéricos */
+.btn, .btn2, .btn3 {
+  display: inline-block;
+  text-align: center;
+  padding-top: 1%;
+  border: 2px;
+  border-radius: 10px;
+  border-color: #1B6BCA;
+  font-size: 100%;
 }
 
-.btn3 {
-    display: inline-block;
-    text-align: center;
-    padding-top: 1%;
-    border: 2px;
-    border-radius: 10px;
-    border-color: #1B6BCA;
+.btn a, .btn2 a, .btn3 a {
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+  color: #1C76E0;
+  background-color: #fff;
+  border-color: #3b3c3c;
+  border-radius: 10px;
+  padding: 8px 16px;
 }
-.btn3 {
-    font-size: 100%;
-}
-
-.btn3 a {
-    font-weight: bold;
-    text-decoration: none;
-    list-style: none;
-    color: #1C76E0;
-    background-color: #fff;
-    border-color: #3b3c3c;
-    border-radius: 10px;
-    padding: 8px;
-}
-
 
 /*final do menu*/
 .nome {
-  display: inline-block; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 h1 {
@@ -116,7 +83,7 @@ h1 a {
 /*inicio da configuração da idade */
 .idade {
   display: inline-block; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
-  padding-left: 1%
+  padding-left: 1%;
   margin-top: 2%;
 }
 
@@ -132,19 +99,92 @@ h2 a {
 }
 /*final da configuração da idade */
 
-/*inicio da configuração da fhoto */
-.foto{
-  display: flex; /*Propriedade display:flex para remover a propriedade padrão que é block, assim possibilitando 2 elementos na mesma linha como no exemplo*/
+/*inicio da configuração da foto */
+.foto {
+  display: flex;
   margin-right: 1%;
-  padding-left: 1%;;
-  /*margin-left: 1%;/*Regulagem da esquerda*/
-  margin-top: 1%;/*Regulagem do top*/
+  padding-left: 1%;
+  margin-top: 1%;
 }
-img { 
-	max-width: 15%; /*ajuste de largura da foto*/
-	height: 15%; /*ajuste de altura da foto*/
-  margin-top: 1%; /*ajuste o distanciamento da foto do top*/
-  border: solid 7px #ccc;
+
+.foto img { 
+  width: 100%;
+  max-width: 180px;
+  height: auto; /* auto para manter proporção */
+  border: solid 7px #ccc;  
   margin-bottom: 10px;
+
+  /* Adicionado animação da foto pular a frente*/
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Efeito de "pular para frente" ao passar o mouse */
+.foto img:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 /*final da configuração da foto */
+
+/*inicio da lista de contato (popup) */
+.contato-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* fundo escurecido */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contato-info .popup {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #1C76E0;
+}
+.contato-info i {
+  margin-right: 10px;
+  color: #1C76E0 !important;
+  font-size: 18px;
+}
+/* Fim da Lista de contato */
+
+
+@media (max-width: 768px) {
+  .btn, .btn2, .btn3 {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  h1, h2 {
+    font-size: 150%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .foto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contato-info .popup {
+    width: 90%;
+  }
+}
