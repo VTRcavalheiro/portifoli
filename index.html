@@ -2,25 +2,40 @@
 <html lang="pt-BR">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<title>Portifolio do Victor</title>
 	<link rel="stylesheet" href="Css\style.css">
 </head>
 <body>
 <div class="container"> <!--inicio do container -->  
 	<div class="menu">
+    <div class="botoes">
+    <div class="btn"><a href="https://vtrcavalheiro.github.io/portifoli/">Home</a></div>
+    <div class="btn2"><a href="#">Contato</a></div>
+    <div class="btn3"><a href="#">Projetos</a></div>
+  </div>
+</div>
 
-	<ul class="menu">
-		<div class="btn"><a href="#">Home</a> </div>
-		<div class="btn2"><a href="#">Contato</a></div>
-		<div class="btn3"><a href="#">Projetos</a></div>
-	</ul></div>
+	<!--inicio da lista-->
+<div class="contato-info" id="contatoInfo">
+  <div class="popup">
+    <span class="close-btn" onclick="fecharPopup()">×</span>
+    <ul>
+      <li><i class="fas fa-envelope"></i>Email: cavalheirochagas@hotmail.com</li>
+      <li><i class="fas fa-phone-alt"></i>Telefone: (51) 9 9656-1350</li>
+      <li><i class="fab fa-linkedin"></i>LinkedIn:
+        <a href="https://www.linkedin.com/in/victor-cavalheiro-chagas/" target="_blank">Victor Cavalheiro Chagas</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--Fim da lista do contato-->
+
 	<div class="foto">
 		<img src="Imagens\perfil.jpg">
 	 		<div class="nome"><!--inicio do nome -->
     			<h1>Victor Cavalheiro Chagas<div class="idade">
     				<br>Idade:25</h1></div><!--final do nome -->
-    			<!--<div class="idade"><!--inicio da idade -->
-    			<!--<h2>Idade:25</h2></div><!--final da idade -->
 			</div><!--final do container --> 
 			<div class="separador"></div>
 	<ul class="apresentacao">
@@ -29,4 +44,16 @@
 		
 	</ul>
 </body>
+<!-- inicio do script-->
+<script>
+  document.querySelector('.btn2 a').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('contatoInfo').style.display = 'flex';
+  });
+
+  function fecharPopup() {
+    document.getElementById('contatoInfo').style.display = 'none';
+  }
+</script>
+<!--fim do script-->
 </html>
