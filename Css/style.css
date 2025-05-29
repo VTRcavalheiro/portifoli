@@ -188,3 +188,20 @@ h2 a {
     width: 90%;
   }
 }
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.submenu a {
+  text-decoration: none;
+  padding: 5px 0;
+  color: #333;
+}
+
+.submenu a:hover {
+  color: #007bff;
+}
