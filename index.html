@@ -51,6 +51,7 @@
 </body>
 <!-- inicio do script-->
 <script>
+  // Ação do botão Contato
   document.querySelector('.btn2 a').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('contatoInfo').style.display = 'flex';
@@ -59,6 +60,15 @@
   function fecharPopup() {
     document.getElementById('contatoInfo').style.display = 'none';
   }
+
+  // Ação do botão Projetos
+  const projetosBtn = document.getElementById('projetos-btn');
+  const submenu = document.getElementById('projetos-submenu');
+
+  projetosBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    submenu.style.display = submenu.style.display === 'flex' ? 'none' : 'flex';
+  });
 </script>
 <!--fim do script-->
 </html>
